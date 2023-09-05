@@ -6,14 +6,19 @@ type StateType = {
   fontSize: number;
 };
 
-type ActionType = {
-  type: 'CHANGE_THEME' | 'CHANGE_FONTSIZE';
+type ChangeThemeType = {
+  type: 'CHANGE_THEME';
+};
+type ChangeFontSize = {
+  type: 'CHANGE_FONTSIZE';
   payload: number;
 };
 
+type ActionType = ChangeFontSize | ChangeThemeType;
+
 const INITIAL_STATE = {
   theme: 'dark',
-  fontSize: 16,
+  fontSize: 22,
 };
 //we need context to consume this reducer
 
